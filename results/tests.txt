@@ -1,0 +1,10 @@
+PASS FCFS hand-calculated completion times
+PASS SJF hand-calculated completion times
+PASS PRIORITY hand-calculated completion times
+PASS RR hand-calculated completion times
+PASS I/O blocking, wakeup and idle intervals
+PASS single process and simultaneous ties
+PASS RR boundary arrival and SJF next CPU burst selection
+PASS six invalid input cases
+PASS 400 random algorithm runs with CPU and turnaround conservation
+ALL TESTS PASSED

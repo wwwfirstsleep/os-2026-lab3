@@ -1,0 +1,30 @@
+CPU scheduling simulator | C++17 | single CPU
+Name: 王旭升  Student ID: 24281204
+Workload: data/io.txt quantum=2
+A arrival=2 priority=1 bursts=2/3/1
+B arrival=3 priority=1 bursts=2
+Algorithm  AvgTurn AvgWeight  AvgWait  AvgResp CPU_pct Dispatch
+t=  0 RUN=IDLE READY=[] NEW=[A,B] BLOCKED=[] DONE=[]
+t=  1 RUN=IDLE READY=[] NEW=[A,B] BLOCKED=[] DONE=[]
+t=  2 CREATE A -> READY
+t=  2 DISPATCH A
+t=  2 RUN=A READY=[] NEW=[B] BLOCKED=[] DONE=[]
+t=  3 CREATE B -> READY
+t=  3 RUN=A READY=[B] NEW=[] BLOCKED=[] DONE=[]
+t=  4 BLOCK A wake=7
+t=  4 DISPATCH B
+t=  4 RUN=B READY=[] NEW=[] BLOCKED=[A] DONE=[]
+t=  5 RUN=B READY=[] NEW=[] BLOCKED=[A] DONE=[]
+t=  6 EXIT B
+t=  6 RUN=IDLE READY=[] NEW=[] BLOCKED=[A] DONE=[B]
+t=  7 IO_DONE A -> READY
+t=  7 DISPATCH A
+t=  7 RUN=A READY=[] NEW=[] BLOCKED=[] DONE=[B]
+t=  8 EXIT A
+
+FCFS
+PID  ARR CPU FIRST FIN TURN WAIT RESP WEIGHT
+A      2   3     2   8    6    0    0   2.00
+B      3   2     4   6    3    1    1   1.50
+GANTT 0-2:IDLE 2-4:A 4-6:B 6-7:IDLE 7-8:A 
+FCFS          4.500     1.750    0.500    0.500   62.500       3

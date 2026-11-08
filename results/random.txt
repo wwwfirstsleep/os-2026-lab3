@@ -1,0 +1,14 @@
+CPU scheduling simulator | C++17 | single CPU
+Name: 王旭升  Student ID: 24281204
+Workload: random seed=20261108 quantum=2
+P1 arrival=5 priority=1 bursts=4/1/4
+P2 arrival=8 priority=5 bursts=1/5/3/4/4
+P3 arrival=7 priority=4 bursts=1/5/1
+P4 arrival=1 priority=2 bursts=3/1/2
+P5 arrival=2 priority=4 bursts=2/1/6
+P6 arrival=4 priority=5 bursts=5/3/6
+Algorithm  AvgTurn AvgWeight  AvgWait  AvgResp CPU_pct Dispatch
+FCFS         27.167     5.255   16.833    6.000   89.362      13
+SJF          20.667     2.949   10.333    5.167   97.674      13
+PRIORITY     22.500     3.819   12.167    8.833   85.714      13
+RR           25.833     4.205   15.500    3.000   97.674      24
